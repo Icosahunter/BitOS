@@ -1,11 +1,22 @@
+#pragma once
 #include "App.h"
+#include "core/MicroBitFiber.h"
+
 namespace BitOS
 {
-  namespace AppManager
+  class AppManager
   {
-    bool isAppRunning;
-    App* currentRunningApp;
-    void launchApp(App app);
-    void closeApp()
+    public:
+      static bool isAppRunning;
+      static App* currentRunningApp;
+
+      static void launchApp(App &app);
+      static void closeApp();
+
+    private:
+      static bool readyToClose;
+
+      static void runAppDone();
+      static void runApp();
   }
 }
