@@ -2,9 +2,21 @@
 
 namespace BitOS
 {
-  void AppManager::launchApp(App &app)
+  void AppManager::launchApp(int index)
   {
-    currentRunningApp = &app;
+    currentRunningApp = &(apps[index]->CreateApp());
+    launch_new_fiber(runApp, runAppDone);
+  }
+
+  void AppManager::launchApp(string name)
+  {
+    for (const auto & app : apps)
+    {
+      if (app->name == name)
+      {
+        currentRunningApp = &(app->CreateApp());
+      }
+    }
     launch_new_fiber(runApp, runAppDone);
   }
 

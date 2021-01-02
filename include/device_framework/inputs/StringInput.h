@@ -1,5 +1,5 @@
 #pragma once
-#include "inputs/Input.h"
+#include "device_framework/inputs/Input.h"
 
 namespace BitOS
 {

@@ -1,5 +1,5 @@
 #pragma once
-#include "outputs/Output.h"
+#include "device_framework/outputs/Output.h"
 
 namespace BitOS
 {

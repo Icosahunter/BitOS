@@ -1,6 +1,6 @@
 #pragma once
 #include "Utilities.h"
-#include "inputs/Input.h"
+#include "device_framework/inputs/Input.h"
 
 namespace BitOS
 {

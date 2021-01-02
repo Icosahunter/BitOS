@@ -3,12 +3,9 @@
 
 namespace BitOS
 {
-  class Input
+  class Output
   {
     public:
       string name;
-      string type;
-      string[] tags;
-      string defaultMapping;
   };
 }

@@ -1,6 +1,8 @@
 #pragma once
 #include "App.h"
+#include "AppFactory.h"
 #include "core/MicroBitFiber.h"
+#include <list>
 
 namespace BitOS
 {
@@ -9,8 +11,10 @@ namespace BitOS
     public:
       static bool isAppRunning;
       static App* currentRunningApp;
+      static AppFactory*[] apps;
 
-      static void launchApp(App &app);
+      static void launchApp(int index);
+      static void launchApp(string name);
       static void closeApp();
 
     private:
